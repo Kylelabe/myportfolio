@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Time Lapse </title>
+    {% load static %}
+
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+
+    <!--     Fonts     -->
+    <link href= "http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-transparent navbar-burger" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" id="menu-toggle" class="navbar-toggle" data-toggle="collapse" data-target="bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar bar1"></span>
+        <span class="icon-bar bar2"></span>
+        <span class="icon-bar bar3"></span>
+      </button>
+    </div>
+
+      <div class="navbar-scroll-to collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="#">
+                      Programming Languages
+                  </a>
+              </li>
+               <li>
+                  <a href="#">
+                      Educational Background
+                  </a>
+               </li>
+              <li>
+                  <a href="#">
+                      Contact Form
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      Interests</a>
+              </li>
+              <li>
+                  <a href="#">
+                      Projects</a>
+              </li>
+              <li>
+                  <a href="#">
+                      About</a>
+              </li>
+              <br>
+              <li>
+                  <button id="theme-toggle"></button>
+              </li>
+          </ul>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    {% load i18n %}
+
+<div class="collapse navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="{% static 'Images/flags/US.png' %}"/>
+        {% trans "English (US)" %}
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'set_language' %}?language=de"><img src="{% static 'Images/flags/DE.png' %}"/> {% trans "Deutsch" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=en"><img src="{% static 'Images/flags/GB.png' %}"/> {% trans "English (UK)" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=fr"><img src="{% static 'Images/flags/FR.png' %}"/> {% trans "Français" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=ro"><img src="{% static 'Images/flags/RO.png' %}"/> {% trans "Română" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=it"><img src="{% static 'Images/flags/IT.png' %}"/> {% trans "Italiano" %}</a></li>
+      </ul>
+    </li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+
+<div class="wrapper">
+    <div class="section intro" id="intro">
+        <div class="container">
+            <div class="title"><h1 class="header-title">
+    <span>B</span>
+    <span>U</span>
+    <span>I</span>
+    <span>L</span>
+    <span>D</span>
+    <span class="--span1">&nbsp;</span>
+    <span>W</span>
+    <span>I</span>
+    <span>T</span>
+    <span>H</span>
+    <span class="--span2">&nbsp;</span>
+</h1> <br>
+<h3>keil.labe</h3></div>
+            <div class="sub-title"><h2>Software Developer</h2></div>
+            <img class="full-width-img" src={% static "Images/depositphotos_217479340-stock-photo-creative-abstract-php-web-design.jpg"%}>
+        </div>
+        <a href="#programing-lang" class="btn btn-lg page-scroll down-arrow">
+        <i class="fa fa-angle-down"></i>
+        </a>
+    </div>
+    <div class="section programing-lang" id="programing-lang">
+        <div class="container">
+           <div class="title add-animation animate">
+               <h4>Programming Languages</h4>
+              <div class="separator-container">
+                  <div class="separator line-separator">⌘</div>
+              </div>
+           </div>
+            <div class="bd-programming-lang">
+                <div class="bd-programming-lang-grid">
+                    <a class="bd-programming-lang is-HTML border-luminous-1" href="#">
+                        <div class="bd-programming-lang-body">
+                            <span class="bd-programming-lang-icon">
+                                <i class="fa fa-html5"></i>
+                            </span>
+                            <h2 class="bd-programming-lang-title">HTML</h2>
+                            <h3>HTML ...</h3>
+                        </div>
+                    </a>
+                    <a class="bd-programming-lang is-CSS border-luminous-2" href="#">
+                        <div class="bd-programming-lang-body">
+                            <span class="bd-programming-lang-icon">
+                                <i class="fa fa-css3"></i>
+                            </span>
+                            <h2 class="bd-programming-lang-title">CSS</h2>
+                            <h3>CSS is...</h3>
+                        </div>
+                    </a>
+                    <a class="bd-programming-lang is-Javascript border-luminous-3" href="#">
+                        <div class="bd-programming-lang-body">
+                            <span class="bd-programming-lang-icon">
+                                <i class="fa fa-js"></i>
+                            </span>
+                            <h2 class="bd-programming-lang-title">Javascript</h2>
+                            <h3>Javascript is ....</h3>
+                        </div>
+                    </a>
+                    <a class="bd-programming-lang is-Python border-luminous-4" href="#">
+                        <div class="bd-programming-lang-body">
+                            <span class="bd-programming-lang-icon">
+                                <i class="fa fa-python"></i>
+                            </span>
+                            <h2 class="bd-programming-lang-title">Python</h2>
+                            <h3>Python is ...</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+               <h3>I have experience with</h3>
+           </div>
+    </div>
+    <div class="section about-me" id="about-me">
+    <div class="container">
+         <div class="title add-animation animate">
+               <h4>About Me</h4>
+              <div class="separator-container">
+                  <div class="separator line-separator">⌘</div>
+              </div>
+           </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+                <div class="rotating-card-container">
+                    <div class="card card-rotate card-background card-background-mask-primary shadow-dark mt-md-0 mt-5">
+                    <div class="front front-background" style="background-size: cover;  background-image: url({% static "Images/DSC_7395.jpg"%})" >
+                        <div class="card-body py-7 text-center">
+                        <i class="material-icons-rounded text-white text--4xl my-3">touch-app</i>
+                            <h3 class="text-white">About me</h3>
+                            <p class="text-white opacity-8">Hi, I'm Caleb; a software developer with a passion for programming. I have experience with HTML, CSS, Javascript, Python, and Flutter</p>
+                        </div>
+                    </div>
+                        <div class="back back-background" style="background-size: cover;  background-image: url({% static "Images/DSC_7453.jpg"%})">
+                            <div class="card-body py-7 text-center">
+                            <i class="material-icons-rounded text-white text--4xl my-3">touch-app</i>
+                                <h3 class="text-white">Discover More</h3>
+                                <p class="text-white opacity-8">From a mentor's quote: <span>"I might have not been part of the industrial revolution but I'm definitely not missing out the present digital evolution!"</span></p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+                <div class="col-lg-5 ms-auto">
+                    <div class="row justify-content-start">
+                        <div class="col-md-6">
+                        <div class="info-about-me">
+                        <h5 class="font-weight-bolder mt-3">Talent</h5>
+                            <p>I enjoy dancing very much as it is an activity that helps me keep my spirit high and rejuvenated.</p>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-about-me">
+                                <h5 class="font-weight-bolder mt-3">Hobby</h5>
+                                <p>I love having social interactions with both new and familiar people. There beauty in it is getting to discover interests and dislikes that are either mutual to you both or not.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mt-5">
+                        <div class="col-md-6 mt-3">
+                            <div class="info-about-me">
+                                <h5 class="font-weight-bolder mt-3">Strengths</h5>
+                                <p>Profession-wise: I'd say finding solutions to problems. Being friendly to people even though we ain't friends.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="info-about-me">
+                                <h5 class="font-weight-bolder mt-3">Weakness</h5>
+                                <p>Loving God and not arriving in time.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>  
+    
+{#    Educational Background#}
+    <div class="section education-bg" id="education-bg">
+        <div class="full-image pattern-image">
+        <div class="filter filter-color-black">
+            <img src="{% static "Images/IMG_0565.jpg"%}" class="full-width-img">
+        </div>
+        </div>
+        <div class="container">
+            <div class="text-area">
+                <div class="title add-animation animate">
+                    <h4>Educational Background</h4>
+                   <div class="separator-container">
+                      <div class="separator line-separator">⌘</div>
+                   </div>
+               </div>
+            </div>
+                <ul class="education-list">
+                    <li>
+                        <h3>Bachelor of Computer Science</h3>
+                        <p>Catholic University of Eastern Africa</p>
+                    </li>
+                    <li>
+                        <h3>Certificate in Web Development</h3>
+                        <p>Emobilis Institute of Technology</p>
+                    </li>
+                </ul>
+            
+            <div class="cv-download">
+                <h2>Download CV</h2>
+                <a class="btn btn-lg btn-primary" href={% static 'assets/CV/My Curriculum Vitae 2.docx' %} >Download now</a>
+            </div>
+            
+        </div>
+   </div>
+    
+{#    Interests#}
+    <div class="section interests" id="interests">
+        <div class="container">
+            <div class="title add-animation animate">
+                <h4>Interests</h4>
+            <div class="separator-container">
+               <div class="separator line-separator">⌘</div>
+            </div>
+            </div>
+        <div class="card-grid">
+        <div class="card" style="--bg-image: url({% static 'Images/chatbot.png' %});">
+            <div class="card-icon">🌿</div>
+            <h3 class="card-title">Tea bot</h3>
+        </div>
+        <div class="card" style="--bg-image: url({% static 'Images/webresponsive.jpeg' %});">
+            <div class="card-icon">🎭</div>
+            <h3 class="card-title">Web responsiveness</h3>
+        </div>
+        <div class="card" style="--bg-image: url({% static 'Images/cross.png' %});">
+            <div class="card-icon">🏙️</div>
+            <h3 class="card-title">Cross Platform Apps</h3>
+        </div>
+    </div>
+
+        </div>
+    </div>
+    
+{#    Projects#}
+    <div class="section projects" id="projects">
+        <div class="container">
+            <div class="title add-animation">
+                            <h4>Projects</h4>
+                            <div class="separator-container">
+                                <div class="separator line-separator">⌘</div>
+                            </div>
+            </div>
+                <div class="bd-best">
+  <div class="bd-best-list">
+    
+    
+
+
+<a class="bd-screenshot bd-best-item" href="https://github.com/keilabe/boskytrial">
+  <img src={% static 'Images/3.png' %} width="672" height="420">
+</a>
+      
+      <a class="bd-screenshot bd-best-item" href="https://substack.com/profile/290853605-keilabe/note/c-78773968">
+  <img src={% static 'Images/Screenshot from 2024-11-25 17-41-05.png' %} width="672" height="420">
+</a>
+
+
+<a class="bd-screenshot bd-best-item" href="https://substack.com/profile/290853605-keilabe/note/c-78740775?utm_source=substack&utm_content=first-note-modal">
+  <img src={% static 'Images/Screenshot from 2024-11-25 10-57-55.png' %} width="672" height="420">
+</a>
+
+    
+
+
+<article data-likes="1" data-id="1126857886599122949" class="bd-tw bd-best-item bd-is-medium ">
+  <header class="bd-tw-header">
+    <a class="bd-tw-author" href="https://x.com/wunderkind021/status/1842146588833042532?t=Ur2RYslKqlHng-980rX3dA&s=09" target="_blank">
+      <figure class="bd-tw-avatar">
+        <img alt="dp" src="{% static 'Images/IMG_20210913_214927_580.jpg'%}">
+      </figure>
+      <div class="bd-tw-name">
+        <strong class="bd-tw-fullname">
+          keilabe
+        </strong>
+        <span class="bd-tw-username">
+          @wunderkind021
+        </span>
+      </div>
+    </a>
+  </header>
+
+  <div class="bd-tw-content">
+      A chat bot application that uses YOLOv8 model to detect disease on image captured of an infected tea leaf plant.<br><br><a href="https://x.com/hashtag/YOLOv8_MODEL?t=Ur2RYslKqlHng-980rX3dA&s=09">#YOLOv8_MODEL</a> <br> <a href="https://x.com/hashtag/TechRevolution?t=Ur2RYslKqlHng-980rX3dA&s=09">#TechRevolution</a> <br><a href="https://x.com/hashtag/TechInnovation?t=Ur2RYslKqlHng-980rX3dA&s=09">#TechInnovation</a>
+      <br>
+      <a href="https://x.com/wunderkind021/status/1842146588833042532?t=Ur2RYslKqlHng-980rX3dA&s=09"><img style="height: 200px; width: 240px " src={% static 'Images/Screenshot_20241125-114850~2.png' %}></a>
+  </div>
+    
+    
+
+  <p class="bd-tw-date">
+    <a href="https://x.com/wunderkind021/status/1842146588833042532" target="_blank">
+      1:15 PM . 04 Oct 24 . 7 Views
+    </a>
+  </p>
+
+  <ul class="bd-tw-actions">
+    <li class="bd-tw-action is-reply">
+      <a class="bd-tw-action-link" href="https://x.com/intent/tweet?in_reply_to=1842146588833042532">
+        <div class="bd-tw-icon"></div>
+      </a>
+    </li>
+
+    <li class="bd-tw-action is-retweet">
+      <a class="bd-tw-action-link" href="https://x.com/intent/retweet?tweet_id=1842146588833042532">
+        <div class="bd-tw-icon"></div>
+        
+          <span class="bd-tw-action-stat">
+            6
+          </span>
+        
+      </a>
+    </li>
+
+    <li class="bd-tw-action is-heart">
+      <a class="bd-tw-action-link" href="https://x.com/intent/like?tweet_id=1842146588833042532&amp;ref_src=twsrc%5Etfw&amp;ref_url=http%3A%2F%2Fbulma.io%2F&amp;original_referer=http%3A%2F%2Fbulma.io%2F&amp;tw_i=1126857886599122949&amp;tw_p=tweetembed" target="_blank">
+        <div class="bd-tw-icon"></div>
+        
+          <span class="bd-tw-action-stat">
+            34
+          </span>
+        
+      </a>
+    </li>
+  </ul>
+
+  
+</article>
+
+<a class="bd-screenshot bd-best-item" href="https://substack.com/profile/290853605-keilabe/note/c-78740775?utm_source=substack&utm_content=first-note-modal">
+  <img src={% static 'Images/Screenshot from 2024-11-25 10-57-55.png' %} width="672" height="420">
+</a>
+  </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+{#    Contact Form#}
+
+ {% block content %}
+{% include 'contact.html' %}
+{% endblock %}
+
+{#footer#}
+{% include 'footer.html' %}
+
+</body>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src={% static "assets/js/webPortfolio.js"%} type="text/javascript"></script>
+   <script src={% static "assets/js/jquery-1.10.2.js"%} type="text/javascript"></script>
+   <script src={% static "assets/js/navbar.js"%} type="text/javascript"></script>
+	<script src={% static "assets/js/bootstrap.min.js"%} type="text/javascript"></script>
+</html>

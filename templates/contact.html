@@ -1,0 +1,46 @@
+
+<form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <div class="section section-contact-2" id="contact">
+        <div class="container">
+            <div class="title add-animation">
+                <h4>Get in Touch</h4>
+                <div class="separator-container">
+                    <div class="separator line-separator">⌘</div>
+                </div>
+                <p>Would you want to talk about something? Just send me your message and I will gladly chat</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group add-animation animation-1">
+                        <label>{{ form.full_name.label }}</label>
+                        {{ form.full_name }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group add-animation animation-2">
+                        <label>{{ form.email.label }}</label>
+                        {{ form.email }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group add-animation animation-3">
+                        <label>{{ form.subject.label }}</label>
+                        {{ form.subject }}
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group add-animation animation-1">
+                        <label>{{ form.message.label }}</label>
+                        {{ form.message }}
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-black btn-contact">
+                            SEND <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
