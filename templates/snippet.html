@@ -1,0 +1,20 @@
+{% load i18n %}
+
+<div class="collapse navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="{% static 'Images/flags/US.png' %}"/>
+        {% trans "English (US)" %}
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="{% url 'set_language' %}?language=de"><img src="{% static 'Images/flags/DE.png' %}"/> {% trans "Deutsch" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=en"><img src="{% static 'Images/flags/GB.png' %}"/> {% trans "English (UK)" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=fr"><img src="{% static 'Images/flags/FR.png' %}"/> {% trans "Français" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=ro"><img src="{% static 'Images/flags/RO.png' %}"/> {% trans "Română" %}</a></li>
+        <li><a href="{% url 'set_language' %}?language=it"><img src="{% static 'Images/flags/IT.png' %}"/> {% trans "Italiano" %}</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
